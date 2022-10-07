@@ -1,4 +1,6 @@
-become: yes
+---
+- hosts: webservers
+  become: yes
   tasks:
     - name: Install latest version of Apache
       apt: name=apache2 update_cache=yes state=latest
